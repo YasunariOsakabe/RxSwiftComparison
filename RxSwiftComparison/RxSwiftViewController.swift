@@ -10,5 +10,17 @@ import RxSwift
 import RxCocoa
 
 class RxSwiftViewController: UIViewController {
+    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var inputTextField: UITextField!
+    
+    private let disposeBag = DisposeBag()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        inputTextField.rx.text
+            .bind(to: outputLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
 
 }
