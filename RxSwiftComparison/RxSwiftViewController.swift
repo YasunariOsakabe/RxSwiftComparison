@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class RxViewController: UIViewController {
+class RxSwiftViewController: UIViewController {
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var remainTextCountLabel: UILabel!
